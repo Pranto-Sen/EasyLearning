@@ -1,0 +1,12 @@
+D:\Visual Studio\dotnet project\BLL\bin\Debug\BLL.dll
+D:\Visual Studio\dotnet project\BLL\bin\Debug\BLL.pdb
+D:\Visual Studio\dotnet project\BLL\bin\Debug\DAL.dll
+D:\Visual Studio\dotnet project\BLL\bin\Debug\DAL.pdb
+D:\Visual Studio\dotnet project\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\Visual Studio\dotnet project\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Visual Studio\dotnet project\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\Visual Studio\dotnet project\BLL\obj\Debug\BLL.dll
+D:\Visual Studio\dotnet project\BLL\obj\Debug\BLL.pdb
+D:\Visual Studio\dotnet project\BLL\bin\Debug\EntityFramework.dll
+D:\Visual Studio\dotnet project\BLL\bin\Debug\DAL.dll.config
+D:\Visual Studio\dotnet project\BLL\bin\Debug\EntityFramework.xml
