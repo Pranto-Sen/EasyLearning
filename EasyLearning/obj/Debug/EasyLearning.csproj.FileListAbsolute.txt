@@ -71,3 +71,8 @@ D:\Visual Studio\dotnet project\EasyLearning\bin\EntityFramework.dll
 D:\Visual Studio\dotnet project\EasyLearning\bin\EntityFramework.SqlServer.dll
 D:\Visual Studio\dotnet project\EasyLearning\bin\EntityFramework.xml
 D:\Visual Studio\dotnet project\EasyLearning\bin\EntityFramework.SqlServer.xml
+D:\Visual Studio\dotnet project\EasyLearning\bin\AutoMapper.dll
+D:\Visual Studio\dotnet project\EasyLearning\bin\DAL.dll
+D:\Visual Studio\dotnet project\EasyLearning\bin\AutoMapper.xml
+D:\Visual Studio\dotnet project\EasyLearning\bin\DAL.pdb
+D:\Visual Studio\dotnet project\EasyLearning\bin\DAL.dll.config

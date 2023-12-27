@@ -10,7 +10,7 @@ namespace DAL.Models
     public class Student
     {
         [Key]
-        public int Id { get; set; }
+        public int StudentId { get; set; }
 
         [Required(ErrorMessage = "Name is required")]
         public string Name { get; set; }

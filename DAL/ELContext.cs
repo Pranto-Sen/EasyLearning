@@ -11,5 +11,11 @@ namespace DAL
     public class ELContext:DbContext
     {
         public DbSet <Student> Students { get; set; }
+        public DbSet <Teacher> Teachers { get; set; }
+        public DbSet <Course> Courses { get; set; }
+        public DbSet <Assignment> Assignments { get; set; }
+
+
+
     }
 }

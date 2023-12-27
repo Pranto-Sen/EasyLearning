@@ -10,3 +10,5 @@ D:\Visual Studio\dotnet project\BLL\obj\Debug\BLL.pdb
 D:\Visual Studio\dotnet project\BLL\bin\Debug\EntityFramework.dll
 D:\Visual Studio\dotnet project\BLL\bin\Debug\DAL.dll.config
 D:\Visual Studio\dotnet project\BLL\bin\Debug\EntityFramework.xml
+D:\Visual Studio\dotnet project\BLL\bin\Debug\AutoMapper.dll
+D:\Visual Studio\dotnet project\BLL\bin\Debug\AutoMapper.xml

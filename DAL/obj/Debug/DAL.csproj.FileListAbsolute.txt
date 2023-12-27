@@ -10,5 +10,5 @@ D:\Visual Studio\dotnet project\DAL\bin\Debug\EntityFramework.SqlServer.dll
 D:\Visual Studio\dotnet project\DAL\bin\Debug\EntityFramework.xml
 D:\Visual Studio\dotnet project\DAL\bin\Debug\EntityFramework.SqlServer.xml
 D:\Visual Studio\dotnet project\DAL\obj\Debug\DAL.csproj.CopyComplete
-D:\Visual Studio\dotnet project\DAL\obj\Debug\DAL.Migrations.initDB.resources
+D:\Visual Studio\dotnet project\DAL\obj\Debug\DAL.Migrations.addStudentTeacher.resources
 D:\Visual Studio\dotnet project\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
