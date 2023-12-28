@@ -9,15 +9,15 @@ using System.Web.Http;
 
 namespace EasyLearning.Controllers
 {
-    public class TeacherController : ApiController
+    public class CourseController : ApiController
     {
         [HttpGet]
-        [Route("api/Teacher/all")]
+        [Route("api/Course/all")]
         public HttpResponseMessage GetAll()
         {
             try
             {
-                var data = TeacherService.Get();
+                var data = CourseService.Get();
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception ex)
@@ -29,29 +29,12 @@ namespace EasyLearning.Controllers
         }
 
         [HttpGet]
-        [Route("api/Teacher/{id}")]
+        [Route("api/Course/{id}")]
         public HttpResponseMessage Get(int id)
         {
             try
             {
-                var data = TeacherService.Get(id);
-                return Request.CreateResponse(HttpStatusCode.OK, data);
-            }
-            catch (Exception ex)
-            {
-
-                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
-
-            }
-        }
-
-        [HttpGet]
-        [Route("api/Teacher/{id}/Course")]
-        public HttpResponseMessage GetwithCourse(int id)
-        {
-            try
-            {
-                var data = TeacherService.GetwithCourse(id);
+                var data = CourseService.Get(id);
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception ex)
@@ -63,12 +46,12 @@ namespace EasyLearning.Controllers
         }
 
         [HttpPost]
-        [Route("api/Teacher/register")]
-        public HttpResponseMessage register(TeacherDTO t)
+        [Route("api/Course/craete")]
+        public HttpResponseMessage Add(CourseDTO course)
         {
             try
             {
-                var data = TeacherService.Register(t);
+                var data = CourseService.Add(course);
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception ex)
@@ -80,12 +63,12 @@ namespace EasyLearning.Controllers
         }
 
         [HttpPost]
-        [Route("api/Teacher/update")]
-        public HttpResponseMessage Update(TeacherDTO t)
+        [Route("api/Course/update")]
+        public HttpResponseMessage Update(CourseDTO course)
         {
             try
             {
-                var res = TeacherService.Update(t);
+                var res = CourseService.Update(course);
                 return Request.CreateResponse(HttpStatusCode.OK, res);
             }
             catch (Exception ex)
@@ -95,12 +78,12 @@ namespace EasyLearning.Controllers
         }
 
         [HttpDelete]
-        [Route("api/Teacher/delete/{id:int}")]
+        [Route("api/Course/delete/{id:int}")]
         public HttpResponseMessage Delete(int id)
         {
             try
             {
-                var res = TeacherService.Delete(id);
+                var res = CourseService.Delete(id);
                 return Request.CreateResponse(HttpStatusCode.OK, res);
             }
             catch (Exception ex)
@@ -111,3 +94,4 @@ namespace EasyLearning.Controllers
         }
     }
 }
+

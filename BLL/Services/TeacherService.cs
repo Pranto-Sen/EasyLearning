@@ -47,6 +47,21 @@ namespace BLL.Services
 
         }
 
+        public static TeacherCourseDTO GetwithCourse(int id)
+        {
+            var data = DataAccessFactory.TeacherData().Read(id);
+            var cfg = new MapperConfiguration(c =>
+            {
+                c.CreateMap<Teacher, TeacherCourseDTO>();
+                c.CreateMap<Course, CourseDTO>();
+            });
+            var mapper = new Mapper(cfg);
+            var mapped = mapper.Map<TeacherCourseDTO>(data);
+            return mapped;
+
+        }
+
+
         public static bool Update(TeacherDTO t)
         {
             var cfg = new MapperConfiguration(c =>

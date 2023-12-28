@@ -12,3 +12,17 @@ D:\Visual Studio\dotnet project\BLL\bin\Debug\DAL.dll.config
 D:\Visual Studio\dotnet project\BLL\bin\Debug\EntityFramework.xml
 D:\Visual Studio\dotnet project\BLL\bin\Debug\AutoMapper.dll
 D:\Visual Studio\dotnet project\BLL\bin\Debug\AutoMapper.xml
+D:\Visual Studio\Dot Net\EasyLearning2\BLL\bin\Debug\BLL.dll
+D:\Visual Studio\Dot Net\EasyLearning2\BLL\bin\Debug\BLL.pdb
+D:\Visual Studio\Dot Net\EasyLearning2\BLL\bin\Debug\AutoMapper.dll
+D:\Visual Studio\Dot Net\EasyLearning2\BLL\bin\Debug\DAL.dll
+D:\Visual Studio\Dot Net\EasyLearning2\BLL\bin\Debug\EntityFramework.dll
+D:\Visual Studio\Dot Net\EasyLearning2\BLL\bin\Debug\DAL.pdb
+D:\Visual Studio\Dot Net\EasyLearning2\BLL\bin\Debug\DAL.dll.config
+D:\Visual Studio\Dot Net\EasyLearning2\BLL\bin\Debug\AutoMapper.xml
+D:\Visual Studio\Dot Net\EasyLearning2\BLL\bin\Debug\EntityFramework.xml
+D:\Visual Studio\Dot Net\EasyLearning2\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\Visual Studio\Dot Net\EasyLearning2\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Dot Net\EasyLearning2\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\Visual Studio\Dot Net\EasyLearning2\BLL\obj\Debug\BLL.dll
+D:\Visual Studio\Dot Net\EasyLearning2\BLL\obj\Debug\BLL.pdb

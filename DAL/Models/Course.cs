@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,11 +16,12 @@ namespace DAL.Models
         public string Description { get; set; }
         public int Price { get; set; }
 
-        public virtual ICollection<Teacher> Teachers { get; set; }
+        [ForeignKey("Teacher")]
+        public int? TeacherId { get; set; }
+        public virtual Teacher Teacher { get; set; }
         public virtual ICollection<Assignment> Assignments { get; set; }
 
-        public Course() { 
-            Teachers = new List<Teacher>();
+        public Course() {
             Assignments = new List<Assignment>();
         }
 

@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class addStudentTeacher : DbMigration
+    public partial class addRelationupdate : DbMigration
     {
         public override void Up()
         {
@@ -15,12 +15,12 @@
                         AssignmentName = c.String(nullable: false),
                         DueDate = c.DateTime(nullable: false),
                         Mark = c.Int(nullable: false),
-                        TeacherId = c.Int(nullable: false),
-                        CourseId = c.Int(nullable: false),
+                        TeacherId = c.Int(),
+                        CourseId = c.Int(),
                     })
                 .PrimaryKey(t => t.AssignmentId)
-                .ForeignKey("dbo.Courses", t => t.CourseId, cascadeDelete: true)
-                .ForeignKey("dbo.Teachers", t => t.TeacherId, cascadeDelete: true)
+                .ForeignKey("dbo.Courses", t => t.CourseId)
+                .ForeignKey("dbo.Teachers", t => t.TeacherId)
                 .Index(t => t.TeacherId)
                 .Index(t => t.CourseId);
             
@@ -32,8 +32,11 @@
                         CourseName = c.String(),
                         Description = c.String(),
                         Price = c.Int(nullable: false),
+                        TeacherId = c.Int(),
                     })
-                .PrimaryKey(t => t.CourseId);
+                .PrimaryKey(t => t.CourseId)
+                .ForeignKey("dbo.Teachers", t => t.TeacherId)
+                .Index(t => t.TeacherId);
             
             CreateTable(
                 "dbo.Teachers",
@@ -65,32 +68,16 @@
                     })
                 .PrimaryKey(t => t.StudentId);
             
-            CreateTable(
-                "dbo.TeacherCourses",
-                c => new
-                    {
-                        Teacher_TeacherId = c.Int(nullable: false),
-                        Course_CourseId = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => new { t.Teacher_TeacherId, t.Course_CourseId })
-                .ForeignKey("dbo.Teachers", t => t.Teacher_TeacherId, cascadeDelete: true)
-                .ForeignKey("dbo.Courses", t => t.Course_CourseId, cascadeDelete: true)
-                .Index(t => t.Teacher_TeacherId)
-                .Index(t => t.Course_CourseId);
-            
         }
         
         public override void Down()
         {
             DropForeignKey("dbo.Assignments", "TeacherId", "dbo.Teachers");
             DropForeignKey("dbo.Assignments", "CourseId", "dbo.Courses");
-            DropForeignKey("dbo.TeacherCourses", "Course_CourseId", "dbo.Courses");
-            DropForeignKey("dbo.TeacherCourses", "Teacher_TeacherId", "dbo.Teachers");
-            DropIndex("dbo.TeacherCourses", new[] { "Course_CourseId" });
-            DropIndex("dbo.TeacherCourses", new[] { "Teacher_TeacherId" });
+            DropForeignKey("dbo.Courses", "TeacherId", "dbo.Teachers");
+            DropIndex("dbo.Courses", new[] { "TeacherId" });
             DropIndex("dbo.Assignments", new[] { "CourseId" });
             DropIndex("dbo.Assignments", new[] { "TeacherId" });
-            DropTable("dbo.TeacherCourses");
             DropTable("dbo.Students");
             DropTable("dbo.Teachers");
             DropTable("dbo.Courses");

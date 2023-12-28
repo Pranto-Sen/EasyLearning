@@ -54,9 +54,9 @@
     <Compile Include="DataAccessFactory.cs" />
     <Compile Include="ELContext.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
-    <Compile Include="Migrations\202312271223243_addStudentTeacher.cs" />
-    <Compile Include="Migrations\202312271223243_addStudentTeacher.designer.cs">
-      <DependentUpon>202312271223243_addStudentTeacher.cs</DependentUpon>
+    <Compile Include="Migrations\202312281337245_addRelationupdate.cs" />
+    <Compile Include="Migrations\202312281337245_addRelationupdate.designer.cs">
+      <DependentUpon>202312281337245_addRelationupdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Assignment.cs" />
@@ -74,8 +74,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202312271223243_addStudentTeacher.resx">
-      <DependentUpon>202312271223243_addStudentTeacher.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202312281337245_addRelationupdate.resx">
+      <DependentUpon>202312281337245_addRelationupdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

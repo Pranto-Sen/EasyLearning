@@ -19,5 +19,10 @@ namespace BLL.DTOs
 
         [Required]
         public int Price { get; set; }
+
+        [Required]
+        public int TeacherId { get; set; }
+
+       
     }
 }
