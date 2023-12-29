@@ -16,7 +16,7 @@ namespace BLL.Services
         {
             var config = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<AssignmentDTO,Assignment>();
+                cfg.CreateMap<AssignmentDTO, Assignment>();
             });
             var mapper = new Mapper(config);
             var date = mapper.Map<Assignment>(Assignment);

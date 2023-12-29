@@ -21,6 +21,7 @@ namespace BLL.Services
             });
             var mapper = new Mapper(config);
             var date = mapper.Map<Course>(Course);
+            
             return DataAccessFactory.CourseData().Create(date);
         }
 
@@ -61,6 +62,21 @@ namespace BLL.Services
             return mapped;
 
         }
+
+        public static CourseAssignmentDTO GetwithCourseAssignment(int id)
+        {
+            var data = DataAccessFactory.CourseData().Read(id);
+            var cfg = new MapperConfiguration(c =>
+            {
+                c.CreateMap<Course, CourseAssignmentDTO>();
+                c.CreateMap<Assignment, AssignmentDTO>();
+            });
+            var mapper = new Mapper(cfg);
+            var mapped = mapper.Map<CourseAssignmentDTO>(data);
+            return mapped;
+
+        }
+
 
         public static bool Update(CourseDTO t)
         {

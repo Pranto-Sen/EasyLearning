@@ -58,9 +58,14 @@
     <Compile Include="Migrations\202312281337245_addRelationupdate.designer.cs">
       <DependentUpon>202312281337245_addRelationupdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202312291903099_addEnrollmodel.cs" />
+    <Compile Include="Migrations\202312291903099_addEnrollmodel.designer.cs">
+      <DependentUpon>202312291903099_addEnrollmodel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Assignment.cs" />
     <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\Enroll.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Teacher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,6 +81,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202312281337245_addRelationupdate.resx">
       <DependentUpon>202312281337245_addRelationupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312291903099_addEnrollmodel.resx">
+      <DependentUpon>202312291903099_addEnrollmodel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -64,6 +64,23 @@ namespace EasyLearning.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("api/Course/{id}/Assignment")]
+        public HttpResponseMessage GetwithCourseAssignment(int id)
+        {
+            try
+            {
+                var data = CourseService.GetwithCourseAssignment(id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+
+            }
+        }
+
         [HttpPost]
         [Route("api/Course/create")]
         public HttpResponseMessage Add(CourseDTO course)

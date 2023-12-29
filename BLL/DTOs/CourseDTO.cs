@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -23,6 +24,8 @@ namespace BLL.DTOs
         [Required]
         public int TeacherId { get; set; }
 
-       
+      
+
+
     }
 }

@@ -26,3 +26,4 @@ D:\Visual Studio\Dot Net\EasyLearning2\DAL\obj\Debug\DAL.dll
 D:\Visual Studio\Dot Net\EasyLearning2\DAL\obj\Debug\DAL.pdb
 D:\Visual Studio\Dot Net\EasyLearning2\DAL\obj\Debug\DAL.Migrations.addRelationupdate.resources
 D:\Visual Studio\Dot Net\EasyLearning2\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+D:\Visual Studio\Dot Net\EasyLearning2\DAL\obj\Debug\DAL.Migrations.addEnrollmodel.resources

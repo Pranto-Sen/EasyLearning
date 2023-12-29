@@ -48,8 +48,10 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="DTOs\AssignmentDTO.cs" />
+    <Compile Include="DTOs\CourseAssignmentDTO.cs" />
     <Compile Include="DTOs\CourseDTO.cs" />
     <Compile Include="DTOs\CourseTeacherDTO.cs" />
+    <Compile Include="DTOs\TeacherCourseAssignDTO.cs" />
     <Compile Include="DTOs\TeacherCourseDTO.cs" />
     <Compile Include="DTOs\TeacherDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
