@@ -36,7 +36,7 @@ namespace DAL.Repos
         public bool Update(Assignment obj)
         {
            var ex = Read(obj.AssignmentId);
-            db.Entry(ex).CurrentValues.SetValues(ex);
+            db.Entry(ex).CurrentValues.SetValues(obj);
             return db.SaveChanges() > 0;
         }
     }

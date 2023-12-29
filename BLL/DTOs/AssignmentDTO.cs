@@ -19,5 +19,11 @@ namespace BLL.DTOs
 
         [Required]
         public int Mark { get; set; }
+
+        [Required]
+        public int TeacherId { get; set; }
+
+        [Required]
+        public int CourseId { get; set; }
     }
 }
