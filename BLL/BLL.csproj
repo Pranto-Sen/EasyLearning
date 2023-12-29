@@ -34,6 +34,7 @@
     <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <HintPath>..\EasyLearning\packages\AutoMapper.10.0.0\lib\net461\AutoMapper.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -48,6 +49,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="DTOs\AssignmentDTO.cs" />
     <Compile Include="DTOs\CourseDTO.cs" />
+    <Compile Include="DTOs\CourseTeacherDTO.cs" />
     <Compile Include="DTOs\TeacherCourseDTO.cs" />
     <Compile Include="DTOs\TeacherDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

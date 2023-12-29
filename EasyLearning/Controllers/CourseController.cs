@@ -1,4 +1,4 @@
-﻿using BLL.DTOs;
+using BLL.DTOs;
 using BLL.Services;
 using System;
 using System.Collections.Generic;
@@ -28,6 +28,8 @@ namespace EasyLearning.Controllers
             }
         }
 
+       
+
         [HttpGet]
         [Route("api/Course/{id}")]
         public HttpResponseMessage Get(int id)
@@ -45,8 +47,25 @@ namespace EasyLearning.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("api/Course/{id}/Teacher")]
+        public HttpResponseMessage GetCourseWithTeacher(int id)
+        {
+            try
+            {
+                var data = CourseService.GetCourseWithTeacher(id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+
+            }
+        }
+
         [HttpPost]
-        [Route("api/Course/craete")]
+        [Route("api/Course/create")]
         public HttpResponseMessage Add(CourseDTO course)
         {
             try
@@ -92,6 +111,7 @@ namespace EasyLearning.Controllers
             }
 
         }
+
     }
 }
 

@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 
 namespace BLL.Services
 {
@@ -43,6 +44,20 @@ namespace BLL.Services
             });
             var mapper = new Mapper(cfg);
             var mapped = mapper.Map<CourseDTO>(data);
+            return mapped;
+
+        }
+
+        public static CourseTeacherDTO GetCourseWithTeacher(int id)
+        {
+            var data = DataAccessFactory.CourseData().Read(id);
+            var cfg = new MapperConfiguration(c =>
+            {
+                c.CreateMap<Teacher, TeacherDTO>();
+                c.CreateMap<Course, CourseTeacherDTO>();
+            });
+            var mapper = new Mapper(cfg);
+            var mapped = mapper.Map<CourseTeacherDTO>(data);
             return mapped;
 
         }
