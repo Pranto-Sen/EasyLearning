@@ -21,9 +21,11 @@ namespace DAL.Models
         public int? CourseId { get; set; }
         public virtual Course Course { get; set; }
 
+        public DateTime EnrollTime { get; set; } = DateTime.Now;
+
         public int PaymentAmount { get; set; }
 
-        public string TnxId { get; set; }
+        public string TnxId { get; set; } = Guid.NewGuid().ToString("N").Substring(0, 8);
 
     }
 }

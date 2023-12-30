@@ -23,5 +23,10 @@ namespace DAL
         {
             return new AssignmentRepo();
         }
+
+        public static IRepo<Community, int, bool> CommunityData()
+        {
+            return new CommunityRepo();
+        }
     }
 }

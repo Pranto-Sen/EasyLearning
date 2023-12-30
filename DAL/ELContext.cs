@@ -17,6 +17,13 @@ namespace DAL
 
         public DbSet <Enroll> Enrolls { get; set; }
 
+        public DbSet<Comment> Comments { get; set; }
+
+        public DbSet<Community> Communities { get; set; }
+
+        public DbSet<Post> Posts { get; set; }
+
+
 
 
     }

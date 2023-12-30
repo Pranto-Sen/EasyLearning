@@ -54,22 +54,22 @@
     <Compile Include="DataAccessFactory.cs" />
     <Compile Include="ELContext.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
-    <Compile Include="Migrations\202312281337245_addRelationupdate.cs" />
-    <Compile Include="Migrations\202312281337245_addRelationupdate.designer.cs">
-      <DependentUpon>202312281337245_addRelationupdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202312291903099_addEnrollmodel.cs" />
-    <Compile Include="Migrations\202312291903099_addEnrollmodel.designer.cs">
-      <DependentUpon>202312291903099_addEnrollmodel.cs</DependentUpon>
+    <Compile Include="Migrations\202312302037188_relationshipchanged.cs" />
+    <Compile Include="Migrations\202312302037188_relationshipchanged.designer.cs">
+      <DependentUpon>202312302037188_relationshipchanged.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Assignment.cs" />
+    <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\Community.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Enroll.cs" />
+    <Compile Include="Models\Post.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Teacher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\AssignmentRepo.cs" />
+    <Compile Include="Repos\CommunityRepo.cs" />
     <Compile Include="Repos\CourseRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\TeacherRepo.cs" />
@@ -79,11 +79,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202312281337245_addRelationupdate.resx">
-      <DependentUpon>202312281337245_addRelationupdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202312291903099_addEnrollmodel.resx">
-      <DependentUpon>202312291903099_addEnrollmodel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202312302037188_relationshipchanged.resx">
+      <DependentUpon>202312302037188_relationshipchanged.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

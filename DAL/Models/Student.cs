@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace DAL.Models
 {
@@ -28,12 +29,26 @@ namespace DAL.Models
 
         [Required(ErrorMessage = "Join Date is required")]
         [DataType(DataType.Date)]
-        public DateTime JoinDate { get; set; }
+        public DateTime JoinDate { get; set; } = DateTime.Now;
 
         [Required(ErrorMessage = "Institute is required")]
         public string Institute { get; set; }
 
         [Required(ErrorMessage = "Education is required")]
         public string Education { get; set; }
+
+
+        public virtual ICollection<Course> Courses { get; set; }
+        public virtual ICollection<Community> Communities { get; set; }
+        public virtual ICollection<Post> Posts { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
+        public Student()
+        {
+            Courses = new List<Course>();
+            Communities = new List<Community>();
+            Posts = new List<Post>();
+            Comments = new List<Comment>();
+
+        }
     }
 }

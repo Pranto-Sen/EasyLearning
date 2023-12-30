@@ -15,12 +15,6 @@ namespace BLL.DTOs
             Courses = new List<CourseAssignmentDTO>();
         }
 
-        //public List<AssignmentDTO> Assignments { get; set; }
-
-        //public TeacherCourseAssignDTO()
-        //{
-           
-        //    Assignments = new List<AssignmentDTO>();
-        //}
+        
     }
 }
