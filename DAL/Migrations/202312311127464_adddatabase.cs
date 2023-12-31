@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class relationshipchanged : DbMigration
+    public partial class adddatabase : DbMigration
     {
         public override void Up()
         {
@@ -37,6 +37,20 @@
                 .PrimaryKey(t => t.CourseId)
                 .ForeignKey("dbo.Teachers", t => t.TeacherId)
                 .Index(t => t.TeacherId);
+            
+            CreateTable(
+                "dbo.StudentCourses",
+                c => new
+                    {
+                        StudentCourseId = c.Int(nullable: false, identity: true),
+                        StudentId = c.Int(nullable: false),
+                        CourseId = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.StudentCourseId)
+                .ForeignKey("dbo.Courses", t => t.CourseId, cascadeDelete: true)
+                .ForeignKey("dbo.Students", t => t.StudentId, cascadeDelete: true)
+                .Index(t => t.StudentId)
+                .Index(t => t.CourseId);
             
             CreateTable(
                 "dbo.Students",
@@ -99,6 +113,20 @@
                 .Index(t => t.CourseId);
             
             CreateTable(
+                "dbo.CommunityStudents",
+                c => new
+                    {
+                        CommunityStudentId = c.Int(nullable: false, identity: true),
+                        CommunityId = c.Int(nullable: false),
+                        StudentId = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.CommunityStudentId)
+                .ForeignKey("dbo.Communities", t => t.CommunityId, cascadeDelete: true)
+                .ForeignKey("dbo.Students", t => t.StudentId, cascadeDelete: true)
+                .Index(t => t.CommunityId)
+                .Index(t => t.StudentId);
+            
+            CreateTable(
                 "dbo.Teachers",
                 c => new
                     {
@@ -130,32 +158,6 @@
                 .Index(t => t.StudentId)
                 .Index(t => t.CourseId);
             
-            CreateTable(
-                "dbo.CommunityStudents",
-                c => new
-                    {
-                        Community_CommunityId = c.Int(nullable: false),
-                        Student_StudentId = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => new { t.Community_CommunityId, t.Student_StudentId })
-                .ForeignKey("dbo.Communities", t => t.Community_CommunityId, cascadeDelete: true)
-                .ForeignKey("dbo.Students", t => t.Student_StudentId, cascadeDelete: true)
-                .Index(t => t.Community_CommunityId)
-                .Index(t => t.Student_StudentId);
-            
-            CreateTable(
-                "dbo.StudentCourses",
-                c => new
-                    {
-                        Student_StudentId = c.Int(nullable: false),
-                        Course_CourseId = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => new { t.Student_StudentId, t.Course_CourseId })
-                .ForeignKey("dbo.Students", t => t.Student_StudentId, cascadeDelete: true)
-                .ForeignKey("dbo.Courses", t => t.Course_CourseId, cascadeDelete: true)
-                .Index(t => t.Student_StudentId)
-                .Index(t => t.Course_CourseId);
-            
         }
         
         public override void Down()
@@ -165,37 +167,37 @@
             DropForeignKey("dbo.Assignments", "TeacherId", "dbo.Teachers");
             DropForeignKey("dbo.Assignments", "CourseId", "dbo.Courses");
             DropForeignKey("dbo.Courses", "TeacherId", "dbo.Teachers");
-            DropForeignKey("dbo.StudentCourses", "Course_CourseId", "dbo.Courses");
-            DropForeignKey("dbo.StudentCourses", "Student_StudentId", "dbo.Students");
+            DropForeignKey("dbo.StudentCourses", "StudentId", "dbo.Students");
             DropForeignKey("dbo.Comments", "StudentId", "dbo.Students");
             DropForeignKey("dbo.Comments", "PostId", "dbo.Posts");
             DropForeignKey("dbo.Posts", "StudentId", "dbo.Students");
             DropForeignKey("dbo.Posts", "CommunityId", "dbo.Communities");
-            DropForeignKey("dbo.CommunityStudents", "Student_StudentId", "dbo.Students");
-            DropForeignKey("dbo.CommunityStudents", "Community_CommunityId", "dbo.Communities");
             DropForeignKey("dbo.Communities", "CourseId", "dbo.Courses");
-            DropIndex("dbo.StudentCourses", new[] { "Course_CourseId" });
-            DropIndex("dbo.StudentCourses", new[] { "Student_StudentId" });
-            DropIndex("dbo.CommunityStudents", new[] { "Student_StudentId" });
-            DropIndex("dbo.CommunityStudents", new[] { "Community_CommunityId" });
+            DropForeignKey("dbo.CommunityStudents", "StudentId", "dbo.Students");
+            DropForeignKey("dbo.CommunityStudents", "CommunityId", "dbo.Communities");
+            DropForeignKey("dbo.StudentCourses", "CourseId", "dbo.Courses");
             DropIndex("dbo.Enrolls", new[] { "CourseId" });
             DropIndex("dbo.Enrolls", new[] { "StudentId" });
+            DropIndex("dbo.CommunityStudents", new[] { "StudentId" });
+            DropIndex("dbo.CommunityStudents", new[] { "CommunityId" });
             DropIndex("dbo.Communities", new[] { "CourseId" });
             DropIndex("dbo.Posts", new[] { "CommunityId" });
             DropIndex("dbo.Posts", new[] { "StudentId" });
             DropIndex("dbo.Comments", new[] { "PostId" });
             DropIndex("dbo.Comments", new[] { "StudentId" });
+            DropIndex("dbo.StudentCourses", new[] { "CourseId" });
+            DropIndex("dbo.StudentCourses", new[] { "StudentId" });
             DropIndex("dbo.Courses", new[] { "TeacherId" });
             DropIndex("dbo.Assignments", new[] { "CourseId" });
             DropIndex("dbo.Assignments", new[] { "TeacherId" });
-            DropTable("dbo.StudentCourses");
-            DropTable("dbo.CommunityStudents");
             DropTable("dbo.Enrolls");
             DropTable("dbo.Teachers");
+            DropTable("dbo.CommunityStudents");
             DropTable("dbo.Communities");
             DropTable("dbo.Posts");
             DropTable("dbo.Comments");
             DropTable("dbo.Students");
+            DropTable("dbo.StudentCourses");
             DropTable("dbo.Courses");
             DropTable("dbo.Assignments");
         }

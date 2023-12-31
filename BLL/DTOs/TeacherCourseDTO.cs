@@ -13,5 +13,6 @@ namespace BLL.DTOs
         public TeacherCourseDTO() { 
             Courses = new List<CourseDTO>();
         }
+
     }
 }

@@ -1,4 +1,4 @@
-﻿using DAL.Models;
+using DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -11,9 +11,9 @@ namespace BLL.DTOs
 {
     public class CommunityDTO
     {
-        public int CommunityId { get; set; }
-        [Required]
-        public string Name { get; set; }
-        public int CourseId { get; set; }
+       public int CommunityId { get; set; }
+       [Required]
+       public string Name { get; set; }
+       public int CourseId { get; set; }
     }
 }

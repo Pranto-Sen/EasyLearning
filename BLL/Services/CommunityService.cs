@@ -63,5 +63,6 @@ namespace BLL.Services
         {
             return DataAccessFactory.CommunityData().Delete(id);
         }
+
     }
 }

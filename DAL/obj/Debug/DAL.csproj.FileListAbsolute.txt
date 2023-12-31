@@ -24,5 +24,7 @@ D:\Visual Studio\Dot Net\EasyLearning2\DAL\obj\Debug\DAL.csproj.CoreCompileInput
 D:\Visual Studio\Dot Net\EasyLearning2\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\Visual Studio\Dot Net\EasyLearning2\DAL\obj\Debug\DAL.dll
 D:\Visual Studio\Dot Net\EasyLearning2\DAL\obj\Debug\DAL.pdb
-D:\Visual Studio\Dot Net\EasyLearning2\DAL\obj\Debug\DAL.Migrations.relationshipchanged.resources
+D:\Visual Studio\Dot Net\EasyLearning2\DAL\obj\Debug\DAL.Migrations.adddatabase.resources
 D:\Visual Studio\Dot Net\EasyLearning2\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+D:\Visual Studio\Dot Net\EasyLearning2\DAL\obj\Debug\DAL.Migrations.addupdate.resources
+D:\Visual Studio\Dot Net\EasyLearning2\DAL\obj\Debug\DAL.Migrations.addupdate2.resources

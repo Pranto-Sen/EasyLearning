@@ -28,5 +28,24 @@ namespace DAL
         {
             return new CommunityRepo();
         }
+
+        public static IRepo2<Student, int, bool> StudentData()
+        {
+            return new StudentRepo();
+        }
+
+        public static IRepo<Enroll, int, bool> EnrollData()
+        {
+            return new EnrollRepo();
+        }
+        public static IRepo<Post, int, bool> PostData()
+        {
+            return new PostRepo();
+        }
+
+        public static IRepo<Comment, int, bool> CommentData()
+        {
+            return new CommentRepo();
+        }
     }
 }

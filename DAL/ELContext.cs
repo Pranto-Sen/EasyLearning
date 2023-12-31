@@ -21,10 +21,10 @@ namespace DAL
 
         public DbSet<Community> Communities { get; set; }
 
-        public DbSet<Post> Posts { get; set; }
+        public DbSet<Post> Posts { get; set; } 
+        public DbSet<CommunityStudent> CommunityStudents { get; set; }
 
-
-
+        public DbSet<StudentCourse> StudentCourses { get; set; }
 
     }
 }

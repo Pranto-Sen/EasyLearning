@@ -29,11 +29,11 @@ namespace DAL.Models
         //public int? CommunityId { get; set; }
         //public virtual Community Community { get; set; }
         public virtual ICollection<Assignment> Assignments { get; set; }
-        public virtual ICollection<Student> Students { get; set; }
+        public virtual ICollection<StudentCourse> StudentCourses { get; set; }
 
         public Course() {
             Assignments = new List<Assignment>();
-            Students = new List<Student>();
+            StudentCourses = new List<StudentCourse>();
         }
 
     }

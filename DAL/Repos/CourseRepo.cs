@@ -13,6 +13,12 @@ namespace DAL.Repos
         public bool Create(Course obj)
         {
             db.Courses.Add(obj);
+            var community = new Community()
+            {
+                Name = obj.CourseName,
+                CourseId = obj.CourseId,
+            };
+            db.Communities.Add(community);
             return db.SaveChanges()>0;
         }
 

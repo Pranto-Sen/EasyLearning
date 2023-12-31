@@ -54,24 +54,39 @@
     <Compile Include="DataAccessFactory.cs" />
     <Compile Include="ELContext.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
-    <Compile Include="Migrations\202312302037188_relationshipchanged.cs" />
-    <Compile Include="Migrations\202312302037188_relationshipchanged.designer.cs">
-      <DependentUpon>202312302037188_relationshipchanged.cs</DependentUpon>
+    <Compile Include="Interfaces\IRepo2.cs" />
+    <Compile Include="Migrations\202312311127464_adddatabase.cs" />
+    <Compile Include="Migrations\202312311127464_adddatabase.designer.cs">
+      <DependentUpon>202312311127464_adddatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312311139169_addupdate.cs" />
+    <Compile Include="Migrations\202312311139169_addupdate.designer.cs">
+      <DependentUpon>202312311139169_addupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312311337110_addupdate2.cs" />
+    <Compile Include="Migrations\202312311337110_addupdate2.designer.cs">
+      <DependentUpon>202312311337110_addupdate2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Assignment.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Community.cs" />
+    <Compile Include="Models\CommunityStudents.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Enroll.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\StudentCourse.cs" />
     <Compile Include="Models\Teacher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\AssignmentRepo.cs" />
+    <Compile Include="Repos\CommentRepo.cs" />
     <Compile Include="Repos\CommunityRepo.cs" />
     <Compile Include="Repos\CourseRepo.cs" />
+    <Compile Include="Repos\EnrollRepo.cs" />
+    <Compile Include="Repos\PostRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
+    <Compile Include="Repos\StudentRepo.cs" />
     <Compile Include="Repos\TeacherRepo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -79,8 +94,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202312302037188_relationshipchanged.resx">
-      <DependentUpon>202312302037188_relationshipchanged.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202312311127464_adddatabase.resx">
+      <DependentUpon>202312311127464_adddatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312311139169_addupdate.resx">
+      <DependentUpon>202312311139169_addupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312311337110_addupdate2.resx">
+      <DependentUpon>202312311337110_addupdate2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -19,11 +19,11 @@ namespace DAL.Models
         public int CourseId { get; set; }
         public virtual Course Course { get; set; }
 
-        public virtual ICollection<Student> Students { get; set; }
+        public virtual ICollection<CommunityStudent> CommunityStudents { get; set; }
         public virtual ICollection<Post> Posts { get; set; }
         public Community()
         {
-            Students = new List<Student>();
+            CommunityStudents = new List<CommunityStudent>();
             Posts = new List<Post>();
         }
 

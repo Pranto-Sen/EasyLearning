@@ -38,14 +38,14 @@ namespace DAL.Models
         public string Education { get; set; }
 
 
-        public virtual ICollection<Course> Courses { get; set; }
-        public virtual ICollection<Community> Communities { get; set; }
+        public virtual ICollection<StudentCourse> StudentCourses { get; set; }
+        public virtual ICollection<CommunityStudent> CommunityStudents { get; set; }
         public virtual ICollection<Post> Posts { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }
         public Student()
         {
-            Courses = new List<Course>();
-            Communities = new List<Community>();
+            StudentCourses = new List<StudentCourse>();
+            CommunityStudents = new List<CommunityStudent>();
             Posts = new List<Post>();
             Comments = new List<Comment>();
 
