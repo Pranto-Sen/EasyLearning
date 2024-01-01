@@ -55,6 +55,8 @@
     <Compile Include="ELContext.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Interfaces\IRepo2.cs" />
+    <Compile Include="Interfaces\IRepo3.cs" />
+    <Compile Include="Interfaces\IRepo4.cs" />
     <Compile Include="Migrations\202312311127464_adddatabase.cs" />
     <Compile Include="Migrations\202312311127464_adddatabase.designer.cs">
       <DependentUpon>202312311127464_adddatabase.cs</DependentUpon>

@@ -113,6 +113,23 @@ namespace EasyLearning.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("api/Student/{id}/PostWithComment")]
+        public HttpResponseMessage GetwithPostComment(int id)
+        {
+            try
+            {
+                var data = StudentService.GetwithPostComment(id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+
+            }
+        }
+
         [HttpPost]
         [Route("api/Student/update")]
         public HttpResponseMessage Update(StudentDTO Student)

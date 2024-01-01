@@ -54,11 +54,13 @@
     <Compile Include="DTOs\CourseDTO.cs" />
     <Compile Include="DTOs\CourseTeacherDTO.cs" />
     <Compile Include="DTOs\EnrollDTO.cs" />
+    <Compile Include="DTOs\PostComentDTO.cs" />
     <Compile Include="DTOs\PostDTO.cs" />
     <Compile Include="DTOs\StudentCourseAssignmentDTO.cs" />
     <Compile Include="DTOs\StudentCourseDTO.cs" />
     <Compile Include="DTOs\StudentDTO.cs" />
     <Compile Include="DTOs\StudentPostDTO.cs" />
+    <Compile Include="DTOs\StudentPostWithCommentDTO.cs" />
     <Compile Include="DTOs\TeacherCourseAssignDTO.cs" />
     <Compile Include="DTOs\TeacherCourseDTO.cs" />
     <Compile Include="DTOs\TeacherDTO.cs" />

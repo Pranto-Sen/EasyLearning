@@ -70,21 +70,33 @@ namespace BLL.Services
 
         }
 
-        public static List<StudentPostDTO> GetwithPost(int id)
+        public static StudentPostDTO GetwithPost(int id)
         {
-            var data = DataAccessFactory.PostData().Read(id);
+            var data = DataAccessFactory.PostData().GetStudentWithPost(id);
             var cfg = new MapperConfiguration(c =>
             {
-                //
-                //c.CreateMap<Student, StudentDTO>();
-                //c.CreateMap<Post, StudentPostDTO>();
-                //c.CreateMap<Course, CourseDTO>();
-                //c.CreateMap<Object, List<StudentPostDTO>>();
-                c.CreateMap<Student, StudentDTO>();
-                //c.CreateMap<StudentDTO, StudentPostDTO>();
+                c.CreateMap<Student, StudentPostDTO>();
+                c.CreateMap<Post, PostDTO>();
             });
             var mapper = new Mapper(cfg);
-            var mapped = mapper.Map<List<StudentPostDTO>>(data);
+            var mapped = mapper.Map<StudentPostDTO>(data);
+
+            return mapped;
+
+        } 
+        
+        public static StudentPostWithCommentDTO GetwithPostComment(int id)
+        {
+            var data = DataAccessFactory.PostData().GetStudentWithPost(id);
+            var cfg = new MapperConfiguration(c =>
+            {
+                c.CreateMap<Student, StudentPostWithCommentDTO>();
+                c.CreateMap<Post, PostComentDTO>();
+                c.CreateMap<Comment, CommentDTO>();
+
+            });
+            var mapper = new Mapper(cfg);
+            var mapped = mapper.Map<StudentPostWithCommentDTO>(data);
 
             return mapped;
 

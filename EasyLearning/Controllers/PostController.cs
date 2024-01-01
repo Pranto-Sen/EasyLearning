@@ -62,6 +62,23 @@ namespace EasyLearning.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("api/Post/{id}/Comment")]
+        public HttpResponseMessage GetwithComment(int id)
+        {
+            try
+            {
+                var data = PostService.GetPostWithComment(id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+
+            }
+        }
+
 
         [HttpPost]
         [Route("api/Post/update")]

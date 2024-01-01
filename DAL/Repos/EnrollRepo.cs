@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class EnrollRepo : Repo, IRepo<Enroll, int, bool>
+    internal class EnrollRepo : Repo, IRepo4<Enroll, int, bool>
     {
         public bool Create(Enroll obj)
         {
@@ -40,6 +40,13 @@ namespace DAL.Repos
         public bool Delete(int id)
         {
             throw new NotImplementedException();
+        }
+
+        public List<Enroll> Filter(DateTime date)
+
+        {
+            //int count = db.Enrolls.Where(e => e.EnrollTime.Month == date.Month).Count();
+            return db.Enrolls.Where(e=> e.EnrollTime.Month== date.Month).ToList();
         }
 
         public List<Enroll> Read()

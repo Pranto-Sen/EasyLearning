@@ -34,6 +34,18 @@ namespace BLL.Services
             var mapped = mapper.Map<EnrollDTO>(data);
             return mapped;
 
+        } 
+        public static List<EnrollDTO> Getinfo(DateTime date)
+        {
+            var data = DataAccessFactory.EnrollData().Filter(date);
+            var cfg = new MapperConfiguration(c =>
+            {
+                c.CreateMap<Enroll, EnrollDTO>();
+            });
+            var mapper = new Mapper(cfg);
+            var mapped = mapper.Map<List<EnrollDTO>>(data);
+            return mapped;
+
         }
     }
 }

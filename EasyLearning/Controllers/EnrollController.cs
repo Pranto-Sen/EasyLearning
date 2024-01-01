@@ -43,7 +43,27 @@ namespace EasyLearning.Controllers
                 return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
 
             }
+        }  
+        
+        [HttpGet]
+        [Route("api/Enrollinfo/{date}")]
+        public HttpResponseMessage Getinfo(DateTime date)
+        {
+            try
+            {
+                var data = EnrollService.Getinfo(date);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+
+            }
         }
+
+
+
 
     }
 }

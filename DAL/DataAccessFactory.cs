@@ -34,11 +34,11 @@ namespace DAL
             return new StudentRepo();
         }
 
-        public static IRepo<Enroll, int, bool> EnrollData()
+        public static IRepo4<Enroll, int, bool> EnrollData()
         {
             return new EnrollRepo();
         }
-        public static IRepo<Post, int, bool> PostData()
+        public static IRepo3<Post, int, bool> PostData()
         {
             return new PostRepo();
         }

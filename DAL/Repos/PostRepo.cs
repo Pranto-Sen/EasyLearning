@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class PostRepo : Repo, IRepo<Post, int, bool>
+    internal class PostRepo : Repo, IRepo3<Post, int, bool>
     {
         public bool Create(Post obj)
         {
@@ -21,6 +21,11 @@ namespace DAL.Repos
             var ex = Read(id); 
             db.Posts.Remove(ex); 
             return db.SaveChanges()>0;
+        }
+
+        public Student GetStudentWithPost(int id)
+        {
+            return db.Students.Where(e => e.StudentId == id).FirstOrDefault();
         }
 
         public List<Post> Read()
